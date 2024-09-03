@@ -1,7 +1,7 @@
 /*
 Leetcode Link               : https://leetcode.com/problems/pascals-triangle/
-Leetcode difficulty         : Medium
-Leetcode Related Topic      : Arrays, Hash Table, Matrix
+Leetcode difficulty         : EASY
+Leetcode Related Topic      : Arrays, DP
 */
 
 //------------------------------Solution - in - C++ -----------------------------------------------------------

@@ -13,26 +13,31 @@ Medium Article Link    : https://medium.com/@pradipalabade/how-to-graph-traverse
 //-------------------------------------------------------------------------------------------------------------
 class Solution {
 public:
-vector<int> bfsOfGraph(int V, vector<int> adj[]) {
-       // Code here
-       vector<int>vis(V, false);
-       vector<int>ans;             
-       queue<int>q;
-       q.push(0);             
-       while(!q.empty()){
-              int front=q.front();
-              q.pop();                 
-              if(!vis[front]){
-              ans.push_back(front);
-              vis[front]=true;
-              for(auto child:adj[front]){
-                     if(!vis[child]){
-                            q.push(child);
-                     }
-              }
-              }
-       }
-       return ans;
-       }
+vector<int> bfsOfGraph(int V, vector<int> adj[]) 
+{
+    // Code here
+    vector<int>vis(V, false);
+    vector<int>ans;             
+    queue<int>q;
+    q.push(0);             
+    while(!q.empty())
+    {
+        int front=q.front();
+        q.pop();                 
+        if(!vis[front])
+        {
+            ans.push_back(front);
+            vis[front]=true;
+            for(auto child:adj[front])
+            {
+                if(!vis[child])
+                {
+                    q.push(child);
+                }
+            }
+        }
+    }
+    return ans;
+}
 };
 //-------------------------------------------------------------------------------------------------------------
